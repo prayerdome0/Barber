@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royal Cutz | Seedwell Investment Limited</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Poppins', sans-serif; background: #0A0A0A; color: white; scroll-behavior: smooth; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        
+        nav { position: fixed; top: 0; width: 100%; background: rgba(0,0,0,0.95); backdrop-filter: blur(10px); z-index: 1000; padding: 15px 0; border-bottom: 1px solid rgba(212, 175, 55, 0.3); }
+        .nav-container { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; }
+        
+        .logo { display: flex; align-items: center; gap: 12px; }
+        .logo i { font-size: 32px; color: #D4AF37; }
+        .logo h2 { font-size: 28px; letter-spacing: 2px; }
+        .logo span { color: #D4AF37; }
+        .logo p { font-size: 9px; color: #888; }
+        
+        /* Animated hamburger menu icon */
+        .mobile-menu { display: none; cursor: pointer; z-index: 1002; }
+        .mobile-menu .bar { width: 25px; height: 3px; background: #D4AF37; margin: 5px 0; transition: 0.3s; }
+        .mobile-menu.active .bar:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        .mobile-menu.active .bar:nth-child(2) { opacity: 0; }
+        .mobile-menu.active .bar:nth-child(3) { transform: rotate(-45deg) translate(7px, -6px); }
+        
+        .nav-links { display: flex; list-style: none; gap: 35px; }
+        .nav-links a { color: white; text-decoration: none; font-weight: 500; transition: 0.3s; }
+        .nav-links a:hover { color: #D4AF37; }
+        
+        .header-icons { display: flex; gap: 20px; align-items: center; }
+        .header-icons i { font-size: 20px; cursor: pointer; transition: 0.3s; color: white; }
+        .header-icons i:hover { color: #D4AF37; }
+        
+        /* Scale-in mobile menu */
+        @media (max-width: 768px) {
+            .nav-links { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100vh; background: #0A0A0A; flex-direction: column; justify-content: center; align-items: center; gap: 30px; z-index: 1001; transform: scale(0); transition: transform 0.3s ease; }
+            .nav-links.active { display: flex; transform: scale(1); }
+            .header-icons { display: none; }
+            .mobile-menu { display: block; }
+            .close-btn { position: absolute; top: 30px; right: 30px; font-size: 32px; cursor: pointer; color: white; }
+            .hero-content h1 { font-size: 42px; }
+        }
+        
+        .hero { height: 100vh; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url('https://i.ibb.co/VcYm96zN/0c75918a8c8facfb07dbf4a90ab8d073.jpg'); background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; text-align: center; margin-top: 65px; }
+        .hero-content h1 { font-size: 68px; }
+        .hero-content h1 span { color: #D4AF37; }
+        .btn-primary { background: #D4AF37; color: #0A0A0A; padding: 14px 40px; text-decoration: none; font-weight: 700; transition: 0.3s; display: inline-block; }
+        
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        section { padding: 100px 0; }
+        .section-header { text-align: center; margin-bottom: 60px; }
+        .section-header h2 { font-size: 48px; }
+        .section-header h2 span { color: #D4AF37; }
+        
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .service-card { background: #111; border-radius: 15px; overflow: hidden; transition: 0.4s; }
+        .service-card:hover { transform: translateY(-10px); }
+        .service-card img { width: 100%; height: 250px; object-fit: cover; }
+        .service-info { padding: 20px; text-align: center; }
+        .service-price { color: #D4AF37; font-size: 22px; font-weight: 700; margin: 10px 0; }
+        
+        .booking-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; background: #111; padding: 50px; border-radius: 20px; }
+        .form-group input, .form-group select { width: 100%; padding: 15px; background: #1A1A1A; border: none; border-radius: 10px; color: white; margin-bottom: 15px; }
+        .btn-submit { background: #D4AF37; color: #0A0A0A; padding: 14px 35px; border: none; cursor: pointer; font-weight: 700; }
+        
+        footer { background: #050505; text-align: center; padding: 40px; }
+        .copyright { font-size: 12px; color: #666; margin-top: 20px; }
+        .social-icons a { color: white; margin: 0 15px; font-size: 22px; transition: 0.3s; }
+        .social-icons a:hover { color: #D4AF37; }
+        
+        .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background: #25D366; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 99; }
+        .whatsapp-float i { color: white; font-size: 32px; }
+        
+        @media (max-width: 768px) {
+            .booking-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-cut"></i>
+                <div><h2>ROYAL <span>CUTZ</span></h2><p>Seedwell Investment Limited</p></div>
+            </div>
+            <div class="mobile-menu" onclick="toggleMenu()">
+                <div class="bar"></div><div class="bar"></div><div class="bar"></div>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <div class="close-btn" onclick="toggleMenu()"><i class="fas fa-times"></i></div>
+                <li><a href="#home" onclick="closeMenu()">Home</a></li>
+                <li><a href="#services" onclick="closeMenu()">Services</a></li>
+                <li><a href="#booking" onclick="closeMenu()">Book Now</a></li>
+                <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+            </ul>
+            <div class="header-icons">
+                <i class="fas fa-calendar-alt"></i>
+                <i class="fas fa-user-circle"></i>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content"><h1>SHARP CUTS. <span>PREMIUM STYLE.</span></h1><p>Experience luxury grooming</p><a href="#booking" class="btn-primary">BOOK NOW →</a></div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <div class="section-header"><h2>Our <span>Services</span></h2></div>
+            <div class="services-grid">
+                <div class="service-card"><img src="https://i.ibb.co/MHLkcRd/10beeb5d03edccb6bc92f4dc86276311.jpg"><div class="service-info"><h3>Classic Haircut</h3><div class="service-price">$35</div><button class="btn-submit" onclick="bookNow()">Book</button></div></div>
+                <div class="service-card"><img src="https://i.ibb.co/p6kbr1dc/aed3cac0a89e1224f5ed95ca63a3129e.jpg"><div class="service-info"><h3>Beard Sculpting</h3><div class="service-price">$25</div><button class="btn-submit" onclick="bookNow()">Book</button></div></div>
+                <div class="service-card"><img src="https://i.ibb.co/S7xcGWfs/0cc742a80619c26ca10ebfcf103eb071.jpg"><div class="service-info"><h3>The Royal Package</h3><div class="service-price">$55</div><button class="btn-submit" onclick="bookNow()">Book</button></div></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="booking" style="background:#0F0F0F">
+        <div class="container">
+            <div class="booking-grid">
+                <div><h3>Book Appointment</h3><p>Walk-ins welcome or book online</p><ul style="margin-top:20px"><li>✓ Premium Products</li><li>✓ Clean Environment</li><li>✓ Expert Barbers</li></ul></div>
+                <div><form id="barberForm"><div class="form-group"><input type="text" placeholder="Your Name"></div><div class="form-group"><input type="email" placeholder="Email"></div><div class="form-group"><select><option>Classic Haircut - $35</option><option>Beard Sculpting - $25</option><option>The Royal Package - $55</option></select></div><div class="form-group"><input type="date"></div><button class="btn-submit">CONFIRM BOOKING</button></form></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <div class="booking-grid">
+                <div><h3>Visit Us</h3><p>123 Barber Street, XXX City<br>Phone: XXX XXX XXX<br>Email: example@xxx.com</p></div>
+                <div><h3>Send Message</h3><form id="contactForm"><div class="form-group"><input type="text" placeholder="Name"></div><div class="form-group"><input type="email" placeholder="Email"></div><textarea placeholder="Message" style="width:100%;padding:15px;background:#1A1A1A;border:none;color:white"></textarea><button class="btn-submit" style="margin-top:15px">SEND</button></form></div>
+            </div>
+        </div>
+    </section>
+
+    <footer><div class="social-icons"><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-tiktok"></i></a></div><p>© 2026 Royal Cutz Barber</p><div class="copyright">Seedwell Investment Limited | Phone: XXX XXX XXX | Email: example@xxx.com | Address: XXX Street, XXX City</div></footer>
+    <a href="https://wa.me/XXXXXXXXXXX" class="whatsapp-float"><i class="fab fa-whatsapp"></i></a>
+
+    <script>
+        function toggleMenu() { 
+            document.getElementById('navLinks').classList.toggle('active');
+            document.querySelector('.mobile-menu').classList.toggle('active');
+        }
+        function closeMenu() { 
+            document.getElementById('navLinks').classList.remove('active');
+            document.querySelector('.mobile-menu').classList.remove('active');
+        }
+        function bookNow() { document.getElementById('booking').scrollIntoView({ behavior: 'smooth' }); }
+        document.querySelectorAll('a[href^="#"]').forEach(a => { a.addEventListener('click', function(e) { e.preventDefault(); document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' }); closeMenu(); }); });
+        document.getElementById('barberForm')?.addEventListener('submit', function(e) { e.preventDefault(); alert('Appointment booked!'); this.reset(); });
+        document.getElementById('contactForm')?.addEventListener('submit', function(e) { e.preventDefault(); alert('Message sent!'); this.reset(); });
+    </script>
+</body>
+</html>
