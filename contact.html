@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us — Royal Cutz | Premium Barbershop</title>
+    <meta name="description" content="Get in touch with Royal Cutz — visit us, call, email or send a message. We're open six days a week and welcome walk-ins.">
+    <meta name="theme-color" content="#0A0A0A">
+    <meta property="og:title" content="Contact Us — Royal Cutz">
+    <meta property="og:description" content="Visit, call or message Royal Cutz — we'd love to see you.">
+    <meta property="og:image" content="assets/images/shop-front.jpg">
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <div class="topbar">
+        <div class="topbar-inner">
+            <span><i class="fas fa-clock"></i>Mon – Sat: 9:00 AM – 7:00 PM &nbsp;|&nbsp; Sun: 10:00 AM – 4:00 PM</span>
+            <span class="tb-right">
+                <a href="tel:XXXXXXXXXXX"><i class="fas fa-phone"></i>+XXX XXX XXX</a>
+                <a href="mailto:example@xxx.com" style="margin-left:22px"><i class="fas fa-envelope"></i>example@xxx.com</a>
+            </span>
+        </div>
+    </div>
+
+    <header class="site-header">
+        <div class="nav-inner">
+            <a href="index.html" class="brand">
+                <span class="brand-icon"><i class="fas fa-cut"></i></span>
+                <span><h1>ROYAL <span>CUTZ</span></h1><p>Seedwell Investment Limited</p></span>
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="booking.html">Book Now</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-cta">
+                <a href="tel:XXXXXXXXXXX" class="nav-phone"><i class="fas fa-phone-alt"></i><span>Call Us<small>+XXX XXX XXX</small></span></a>
+                <a href="booking.html" class="btn btn-gold btn-sm">Book Now</a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+        </div>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="about.html">About</a>
+        <a href="booking.html">Book Now</a>
+        <a href="contact.html" class="active">Contact</a>
+        <a href="booking.html" class="btn btn-gold mm-cta">Book Appointment</a>
+        <div class="mm-social">
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+    </div>
+
+    <!-- Page hero -->
+    <section class="page-hero" style="background-image:url('assets/images/shop-front.jpg')">
+        <div class="container">
+            <div class="crumbs"><a href="index.html">Home</a><span class="sep">/</span><span>Contact</span></div>
+            <h1>Contact <span>Us</span></h1>
+            <p>Questions, bookings or just want to say hi — we'd love to hear from you.</p>
+        </div>
+    </section>
+
+    <!-- Contact info + form -->
+    <section class="section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="reveal">
+                    <div class="info-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div><h4>Visit Us</h4><p>123 Barber Street, XXX City</p><p style="font-size:12px;margin-top:4px">Free parking available nearby</p></div>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-phone-alt"></i>
+                        <div><h4>Call Us</h4><a href="tel:XXXXXXXXXXX">+XXX XXX XXX</a><a href="#" onclick="openWhatsApp(); return false;" style="margin-top:4px"><i class="fab fa-whatsapp" style="color:var(--green)"></i> WhatsApp us — we reply fast</a></div>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-envelope"></i>
+                        <div><h4>Email Us</h4><a href="mailto:example@xxx.com">example@xxx.com</a></div>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-clock"></i>
+                        <div><h4>Opening Hours</h4>
+                            <p>Mon – Fri: 9:00 AM – 7:00 PM</p>
+                            <p>Saturday: 9:00 AM – 7:00 PM</p>
+                            <p>Sunday: 10:00 AM – 4:00 PM</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-star"></i>
+                        <div><h4>Follow Us</h4>
+                            <p style="display:flex;gap:14px;margin-top:8px">
+                                <a href="#" aria-label="Instagram"><i class="fab fa-instagram" style="font-size:20px"></i></a>
+                                <a href="#" aria-label="TikTok"><i class="fab fa-tiktok" style="font-size:20px"></i></a>
+                                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f" style="font-size:20px"></i></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-card reveal reveal-delay-1">
+                    <div class="section-head" style="text-align:left;margin:0 0 30px">
+                        <span class="eyebrow">Send A Message</span>
+                        <h2 style="font-size:30px">We'd Love To <span>Hear From You</span></h2>
+                    </div>
+                    <form id="contactForm" novalidate>
+                        <div class="form-grid">
+                            <div class="field">
+                                <label for="cname"><i class="fas fa-user"></i>Name *</label>
+                                <input type="text" id="cname" name="name" placeholder="Your name" required>
+                            </div>
+                            <div class="field">
+                                <label for="cphone"><i class="fas fa-phone"></i>Phone</label>
+                                <input type="tel" id="cphone" name="phone" placeholder="Your phone number">
+                            </div>
+                            <div class="field full">
+                                <label for="cemail"><i class="fas fa-envelope"></i>Email *</label>
+                                <input type="email" id="cemail" name="email" placeholder="you@example.com" required>
+                            </div>
+                            <div class="field full">
+                                <label for="cmessage"><i class="fas fa-comment"></i>Message *</label>
+                                <textarea id="cmessage" name="message" placeholder="How can we help?" required></textarea>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-gold btn-block"><i class="fas fa-paper-plane"></i> Send Message</button>
+                    </form>
+
+                    <!-- Success panel -->
+                    <div class="success-panel" id="contactSuccess">
+                        <div class="success-icon"><i class="fas fa-check"></i></div>
+                        <h3>Message Sent!</h3>
+                        <p id="contactSuccessMsg">Thanks! Your message has been received.</p>
+                        <button class="btn btn-outline" onclick="location.reload()"><i class="fas fa-redo"></i> Send Another</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map -->
+    <section class="section section-tight" style="padding-top:0">
+        <div class="container">
+            <div class="map-wrap reveal">
+                <!-- ✏️ Replace the q= coordinates below with your real address to show your exact location -->
+                <iframe src="https://www.google.com/maps?q=Lusaka%2C%20Zambia&output=embed" title="Royal Cutz location map" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-banner">
+        <div class="container reveal">
+            <h2>Prefer To Just <span>Book?</span></h2>
+            <p>Skip the back-and-forth — reserve your chair online in under a minute.</p>
+            <div class="cta-actions">
+                <a href="booking.html" class="btn btn-gold">Book Appointment <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="brand"><span class="brand-icon"><i class="fas fa-cut"></i></span><span><h1>ROYAL <span>CUTZ</span></h1><p>Seedwell Investment Limited</p></span></a>
+                    <p>Premium grooming for the modern gentleman. Sharp cuts, expert barbers and an experience that keeps clients coming back.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="booking.html">Book Appointment</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html">Classic Haircut</a></li>
+                        <li><a href="services.html">Beard Sculpting</a></li>
+                        <li><a href="services.html">Skin Fade & Design</a></li>
+                        <li><a href="services.html">Hot Towel Shave</a></li>
+                        <li><a href="services.html">Kids Cut</a></li>
+                        <li><a href="services.html">The Royal Package</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Get In Touch</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i><span>123 Barber Street,<br>XXX City</span></li>
+                        <li><i class="fas fa-phone-alt"></i><a href="tel:XXXXXXXXXXX">+XXX XXX XXX</a></li>
+                        <li><i class="fas fa-envelope"></i><a href="mailto:example@xxx.com">example@xxx.com</a></li>
+                        <li><i class="fas fa-clock"></i><span>Mon – Sat: 9AM – 7PM<br>Sun: 10AM – 4PM</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container"><p>© <span data-year>2026</span> Royal Cutz Barber — Seedwell Investment Limited. All rights reserved.</p></div>
+        </div>
+    </footer>
+
+    <a href="#" class="whatsapp-float" onclick="openWhatsApp(); return false;" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    <button class="to-top" id="toTop" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

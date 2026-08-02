@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment — Royal Cutz | Premium Barbershop</title>
+    <meta name="description" content="Book your appointment at Royal Cutz in under a minute. Choose your service, barber, date and time — or book directly on WhatsApp.">
+    <meta name="theme-color" content="#0A0A0A">
+    <meta property="og:title" content="Book Appointment — Royal Cutz">
+    <meta property="og:description" content="Reserve your chair at Royal Cutz — fast online booking.">
+    <meta property="og:image" content="assets/images/hero.jpg">
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <div class="topbar">
+        <div class="topbar-inner">
+            <span><i class="fas fa-clock"></i>Mon – Sat: 9:00 AM – 7:00 PM &nbsp;|&nbsp; Sun: 10:00 AM – 4:00 PM</span>
+            <span class="tb-right">
+                <a href="tel:XXXXXXXXXXX"><i class="fas fa-phone"></i>+XXX XXX XXX</a>
+                <a href="mailto:example@xxx.com" style="margin-left:22px"><i class="fas fa-envelope"></i>example@xxx.com</a>
+            </span>
+        </div>
+    </div>
+
+    <header class="site-header">
+        <div class="nav-inner">
+            <a href="index.html" class="brand">
+                <span class="brand-icon"><i class="fas fa-cut"></i></span>
+                <span><h1>ROYAL <span>CUTZ</span></h1><p>Seedwell Investment Limited</p></span>
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="booking.html" class="active">Book Now</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-cta">
+                <a href="tel:XXXXXXXXXXX" class="nav-phone"><i class="fas fa-phone-alt"></i><span>Call Us<small>+XXX XXX XXX</small></span></a>
+                <a href="booking.html" class="btn btn-gold btn-sm">Book Now</a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+        </div>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="about.html">About</a>
+        <a href="booking.html" class="active">Book Now</a>
+        <a href="contact.html">Contact</a>
+        <a href="booking.html" class="btn btn-gold mm-cta">Book Appointment</a>
+        <div class="mm-social">
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+    </div>
+
+    <!-- Page hero -->
+    <section class="page-hero" style="background-image:url('assets/images/hair-design.jpg')">
+        <div class="container">
+            <div class="crumbs"><a href="index.html">Home</a><span class="sep">/</span><span>Book Now</span></div>
+            <h1>Book <span>Appointment</span></h1>
+            <p>Reserve your chair in under a minute — or skip the form and book directly on WhatsApp.</p>
+        </div>
+    </section>
+
+    <!-- Booking -->
+    <section class="section">
+        <div class="container">
+            <div class="booking-layout">
+
+                <!-- Form column -->
+                <div>
+                    <div class="form-card reveal">
+                        <div class="section-head" style="text-align:left;margin:0 0 34px">
+                            <span class="eyebrow">Online Booking</span>
+                            <h2 style="font-size:30px">Reserve Your <span>Chair</span></h2>
+                        </div>
+                        <form id="bookingForm" novalidate>
+                            <div class="form-grid">
+                                <div class="field">
+                                    <label for="name"><i class="fas fa-user"></i>Full Name *</label>
+                                    <input type="text" id="name" name="name" placeholder="e.g. John Doe" required>
+                                </div>
+                                <div class="field">
+                                    <label for="phone"><i class="fas fa-phone"></i>Phone Number *</label>
+                                    <input type="tel" id="phone" name="phone" placeholder="e.g. +260 97X XXX XXX" required>
+                                </div>
+                                <div class="field full">
+                                    <label for="email"><i class="fas fa-envelope"></i>Email (optional)</label>
+                                    <input type="email" id="email" name="email" placeholder="you@example.com">
+                                </div>
+                                <div class="field">
+                                    <label for="service"><i class="fas fa-cut"></i>Select Service *</label>
+                                    <select id="service" name="service" required>
+                                        <option value="" disabled selected>Choose a service…</option>
+                                        <option value="Classic Haircut">Classic Haircut — $35</option>
+                                        <option value="Beard Sculpting">Beard Sculpting — $25</option>
+                                        <option value="Skin Fade & Design">Skin Fade & Design — $40</option>
+                                        <option value="Hot Towel Shave">Hot Towel Shave — $30</option>
+                                        <option value="Kids Cut">Kids Cut — $25</option>
+                                        <option value="The Royal Package">The Royal Package — $55</option>
+                                    </select>
+                                </div>
+                                <div class="field">
+                                    <label for="barber"><i class="fas fa-user-tie"></i>Preferred Barber</label>
+                                    <select id="barber" name="barber">
+                                        <option value="No preference" selected>No preference</option>
+                                        <option value="Head Barber">Head Barber — Classic Cuts</option>
+                                        <option value="Beard Specialist">Beard Specialist — Shaping</option>
+                                        <option value="Shave Master">Shave Master — Razor Work</option>
+                                    </select>
+                                </div>
+                                <div class="field">
+                                    <label for="date"><i class="fas fa-calendar-day"></i>Date *</label>
+                                    <input type="date" id="date" name="date" required>
+                                </div>
+                                <div class="field">
+                                    <label for="time"><i class="fas fa-clock"></i>Time *</label>
+                                    <select id="time" name="time" required>
+                                        <option value="" disabled selected>Choose a time…</option>
+                                        <option>9:00 AM</option><option>9:30 AM</option>
+                                        <option>10:00 AM</option><option>10:30 AM</option>
+                                        <option>11:00 AM</option><option>11:30 AM</option>
+                                        <option>12:00 PM</option><option>12:30 PM</option>
+                                        <option>1:00 PM</option><option>1:30 PM</option>
+                                        <option>2:00 PM</option><option>2:30 PM</option>
+                                        <option>3:00 PM</option><option>3:30 PM</option>
+                                        <option>4:00 PM</option><option>4:30 PM</option>
+                                        <option>5:00 PM</option><option>5:30 PM</option>
+                                        <option>6:00 PM</option><option>6:30 PM</option>
+                                    </select>
+                                </div>
+                                <div class="field full">
+                                    <label for="notes"><i class="fas fa-comment"></i>Notes (optional)</label>
+                                    <textarea id="notes" name="notes" placeholder="Anything we should know? Style references, allergies, etc."></textarea>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-gold btn-block" style="margin-top:6px"><i class="fas fa-calendar-check"></i> Confirm Booking</button>
+                            <p class="field-note" style="text-align:center;margin-top:14px"><i class="fas fa-info-circle"></i> We'll confirm your booking via phone or WhatsApp shortly.</p>
+                        </form>
+
+                        <!-- Success panel -->
+                        <div class="success-panel" id="bookingSuccess">
+                            <div class="success-icon"><i class="fas fa-check"></i></div>
+                            <h3>Booking Received!</h3>
+                            <p>Thank you — your appointment request has been submitted. We'll confirm it shortly via phone or WhatsApp.</p>
+                            <ul class="side-list" id="bookingSummary" style="text-align:left;max-width:420px;margin:0 auto 26px"></ul>
+                            <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+                                <a href="#" class="btn btn-whatsapp" id="waConfirm" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Confirm via WhatsApp</a>
+                                <button class="btn btn-outline" id="bookAgain"><i class="fas fa-redo"></i> Book Another</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <aside>
+                    <div class="side-card reveal reveal-delay-1">
+                        <h3><i class="fas fa-bolt"></i>Prefer WhatsApp?</h3>
+                        <p style="color:var(--muted);font-size:13.5px;margin-bottom:18px">Skip the form — send us a message and we'll book you in right away.</p>
+                        <a href="#" class="btn btn-whatsapp btn-block" onclick="openWhatsApp(); return false;"><i class="fab fa-whatsapp"></i> Book via WhatsApp</a>
+                    </div>
+                    <div class="side-card reveal reveal-delay-2">
+                        <h3><i class="fas fa-clipboard-list"></i>What To Expect</h3>
+                        <ul class="side-list">
+                            <li><i class="fas fa-check"></i><span>Arrive 5 minutes early for your appointment.</span></li>
+                            <li><i class="fas fa-check"></i><span>Every visit starts with a quick style consultation.</span></li>
+                            <li><i class="fas fa-check"></i><span>Cash and mobile money accepted at the counter.</span></li>
+                            <li><i class="fas fa-check"></i><span>Running late? Call us and we'll hold your slot.</span></li>
+                            <li><i class="fas fa-check"></i><span>Walk-ins welcome — first come, first served.</span></li>
+                        </ul>
+                    </div>
+                    <div class="side-card reveal reveal-delay-3">
+                        <h3><i class="fas fa-clock"></i>Opening Hours</h3>
+                        <table class="hours-table">
+                            <tr><td>Monday – Friday</td><td>9:00 AM – 7:00 PM</td></tr>
+                            <tr><td>Saturday</td><td>9:00 AM – 7:00 PM</td></tr>
+                            <tr><td>Sunday</td><td>10:00 AM – 4:00 PM</td></tr>
+                        </table>
+                    </div>
+                    <div class="side-card reveal reveal-delay-3">
+                        <h3><i class="fas fa-phone-alt"></i>Need Help?</h3>
+                        <p style="color:var(--muted);font-size:13.5px;margin-bottom:8px">Call or WhatsApp us and we'll sort you out.</p>
+                        <a href="tel:XXXXXXXXXXX" style="color:var(--gold);font-weight:600;font-size:16px"><i class="fas fa-phone"></i> +XXX XXX XXX</a>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="brand"><span class="brand-icon"><i class="fas fa-cut"></i></span><span><h1>ROYAL <span>CUTZ</span></h1><p>Seedwell Investment Limited</p></span></a>
+                    <p>Premium grooming for the modern gentleman. Sharp cuts, expert barbers and an experience that keeps clients coming back.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="booking.html">Book Appointment</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html">Classic Haircut</a></li>
+                        <li><a href="services.html">Beard Sculpting</a></li>
+                        <li><a href="services.html">Skin Fade & Design</a></li>
+                        <li><a href="services.html">Hot Towel Shave</a></li>
+                        <li><a href="services.html">Kids Cut</a></li>
+                        <li><a href="services.html">The Royal Package</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Get In Touch</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i><span>123 Barber Street,<br>XXX City</span></li>
+                        <li><i class="fas fa-phone-alt"></i><a href="tel:XXXXXXXXXXX">+XXX XXX XXX</a></li>
+                        <li><i class="fas fa-envelope"></i><a href="mailto:example@xxx.com">example@xxx.com</a></li>
+                        <li><i class="fas fa-clock"></i><span>Mon – Sat: 9AM – 7PM<br>Sun: 10AM – 4PM</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container"><p>© <span data-year>2026</span> Royal Cutz Barber — Seedwell Investment Limited. All rights reserved.</p></div>
+        </div>
+    </footer>
+
+    <a href="#" class="whatsapp-float" onclick="openWhatsApp(); return false;" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    <button class="to-top" id="toTop" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

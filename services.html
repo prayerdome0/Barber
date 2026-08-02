@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services — Royal Cutz | Premium Barbershop</title>
+    <meta name="description" content="Explore Royal Cutz services: classic haircuts, beard sculpting, skin fades, hot towel shaves, kids cuts and the Royal Package. Book your appointment online.">
+    <meta name="theme-color" content="#0A0A0A">
+    <meta property="og:title" content="Our Services — Royal Cutz">
+    <meta property="og:description" content="Classic haircuts, beard sculpting, fades, hot towel shaves and more.">
+    <meta property="og:image" content="assets/images/hero.jpg">
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <div class="topbar">
+        <div class="topbar-inner">
+            <span><i class="fas fa-clock"></i>Mon – Sat: 9:00 AM – 7:00 PM &nbsp;|&nbsp; Sun: 10:00 AM – 4:00 PM</span>
+            <span class="tb-right">
+                <a href="tel:XXXXXXXXXXX"><i class="fas fa-phone"></i>+XXX XXX XXX</a>
+                <a href="mailto:example@xxx.com" style="margin-left:22px"><i class="fas fa-envelope"></i>example@xxx.com</a>
+            </span>
+        </div>
+    </div>
+
+    <header class="site-header">
+        <div class="nav-inner">
+            <a href="index.html" class="brand">
+                <span class="brand-icon"><i class="fas fa-cut"></i></span>
+                <span><h1>ROYAL <span>CUTZ</span></h1><p>Seedwell Investment Limited</p></span>
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html" class="active">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-cta">
+                <a href="tel:XXXXXXXXXXX" class="nav-phone"><i class="fas fa-phone-alt"></i><span>Call Us<small>+XXX XXX XXX</small></span></a>
+                <a href="booking.html" class="btn btn-gold btn-sm">Book Now</a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+        </div>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html">Home</a>
+        <a href="services.html" class="active">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="about.html">About</a>
+        <a href="booking.html">Book Now</a>
+        <a href="contact.html">Contact</a>
+        <a href="booking.html" class="btn btn-gold mm-cta">Book Appointment</a>
+        <div class="mm-social">
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+    </div>
+
+    <!-- Page hero -->
+    <section class="page-hero" style="background-image:url('assets/images/hot-towel-shave.jpg')">
+        <div class="container">
+            <div class="crumbs"><a href="index.html">Home</a><span class="sep">/</span><span>Services</span></div>
+            <h1>Our <span>Services</span></h1>
+            <p>Every service is delivered by a master barber with premium products — because you deserve nothing less.</p>
+        </div>
+    </section>
+
+    <!-- Services list -->
+    <section class="section">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">Menu & Pricing</span>
+                <h2>The Full <span>Menu</span></h2>
+                <p>Transparent pricing, no surprises. Every service includes a consultation and finish with premium products.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card reveal">
+                    <div class="service-media"><span class="service-tag">Most Popular</span><img src="assets/images/classic-haircut.jpg" alt="Classic haircut"></div>
+                    <div class="service-info">
+                        <h3>Classic Haircut</h3>
+                        <p>The timeless cut, executed with razor-sharp precision. Includes wash, consultation and styling.</p>
+                        <div class="service-meta"><span class="service-price">$35</span><span class="service-duration"><i class="far fa-clock"></i>45 min</span></div>
+                        <button class="btn btn-gold" onclick="bookService('Classic Haircut')">Book This Service</button>
+                    </div>
+                </div>
+                <div class="service-card reveal reveal-delay-1">
+                    <div class="service-media"><span class="service-tag">Signature</span><img src="assets/images/beard-trim.jpg" alt="Beard sculpting"></div>
+                    <div class="service-info">
+                        <h3>Beard Sculpting</h3>
+                        <p>Precision shaping, lining and conditioning. Includes hot towel prep and beard oil finish.</p>
+                        <div class="service-meta"><span class="service-price">$25</span><span class="service-duration"><i class="far fa-clock"></i>30 min</span></div>
+                        <button class="btn btn-gold" onclick="bookService('Beard Sculpting')">Book This Service</button>
+                    </div>
+                </div>
+                <div class="service-card reveal reveal-delay-2">
+                    <div class="service-media"><span class="service-tag">Trending</span><img src="assets/images/hair-design.jpg" alt="Skin fade with hair design"></div>
+                    <div class="service-info">
+                        <h3>Skin Fade & Design</h3>
+                        <p>Crisp skin fade with optional line art or design. The modern gentleman's statement cut.</p>
+                        <div class="service-meta"><span class="service-price">$40</span><span class="service-duration"><i class="far fa-clock"></i>60 min</span></div>
+                        <button class="btn btn-gold" onclick="bookService('Skin Fade & Design')">Book This Service</button>
+                    </div>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-media"><span class="service-tag">Traditional</span><img src="assets/images/straight-razor.jpg" alt="Hot towel straight razor shave"></div>
+                    <div class="service-info">
+                        <h3>Hot Towel Shave</h3>
+                        <p>A traditional straight-razor shave with hot towels and soothing balm. Pure relaxation.</p>
+                        <div class="service-meta"><span class="service-price">$30</span><span class="service-duration"><i class="far fa-clock"></i>45 min</span></div>
+                        <button class="btn btn-gold" onclick="bookService('Hot Towel Shave')">Book This Service</button>
+                    </div>
+                </div>
+                <div class="service-card reveal reveal-delay-1">
+                    <div class="service-media"><span class="service-tag">Family</span><img src="assets/images/kids-cut.jpg" alt="Kids haircut"></div>
+                    <div class="service-info">
+                        <h3>Kids Cut</h3>
+                        <p>Patient, friendly cuts for the little gentlemen. Includes a fun experience they'll love.</p>
+                        <div class="service-meta"><span class="service-price">$25</span><span class="service-duration"><i class="far fa-clock"></i>30 min</span></div>
+                        <button class="btn btn-gold" onclick="bookService('Kids Cut')">Book This Service</button>
+                    </div>
+                </div>
+                <div class="service-card reveal reveal-delay-2">
+                    <div class="service-media"><span class="service-tag">Ultimate</span><img src="assets/images/hot-towel-shave.jpg" alt="The Royal Package"></div>
+                    <div class="service-info">
+                        <h3>The Royal Package</h3>
+                        <p>Our flagship: haircut + beard sculpting + hot towel shave + facial + scalp massage.</p>
+                        <div class="service-meta"><span class="service-price">$55</span><span class="service-duration"><i class="far fa-clock"></i>90 min</span></div>
+                        <button class="btn btn-gold" onclick="bookService('The Royal Package')">Book This Service</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="section section-alt">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">Simple & Easy</span>
+                <h2>How It <span>Works</span></h2>
+            </div>
+            <div class="steps-grid">
+                <div class="step-card reveal"><div class="step-num"></div><h3>Book Your Slot</h3><p>Book online in under a minute or walk in — we'll fit you in.</p><i class="fas fa-calendar-check"></i></div>
+                <div class="step-card reveal reveal-delay-1"><div class="step-num"></div><h3>Arrive & Relax</h3><p>Settle into a leather chair, grab a drink and enjoy the vibe.</p><i class="fas fa-mug-hot"></i></div>
+                <div class="step-card reveal reveal-delay-2"><div class="step-num"></div><h3>Get The Cut</h3><p>Consult with your barber, then watch the magic happen.</p><i class="fas fa-cut"></i></div>
+                <div class="step-card reveal reveal-delay-3"><div class="step-num"></div><h3>Walk Out Sharp</h3><p>Styled, polished and ready to own the room. See you next time.</p><i class="fas fa-crown"></i></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-banner">
+        <div class="container reveal">
+            <h2>Your Chair Is <span>Waiting</span></h2>
+            <p>Book online in under a minute and skip the line — or walk in and let us take care of you.</p>
+            <div class="cta-actions">
+                <a href="booking.html" class="btn btn-gold">Book Appointment <i class="fas fa-arrow-right"></i></a>
+                <a href="#" class="btn btn-whatsapp" onclick="openWhatsApp(); return false;"><i class="fab fa-whatsapp"></i> WhatsApp Us</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="brand"><span class="brand-icon"><i class="fas fa-cut"></i></span><span><h1>ROYAL <span>CUTZ</span></h1><p>Seedwell Investment Limited</p></span></a>
+                    <p>Premium grooming for the modern gentleman. Sharp cuts, expert barbers and an experience that keeps clients coming back.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="booking.html">Book Appointment</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html">Classic Haircut</a></li>
+                        <li><a href="services.html">Beard Sculpting</a></li>
+                        <li><a href="services.html">Skin Fade & Design</a></li>
+                        <li><a href="services.html">Hot Towel Shave</a></li>
+                        <li><a href="services.html">Kids Cut</a></li>
+                        <li><a href="services.html">The Royal Package</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Get In Touch</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i><span>123 Barber Street,<br>XXX City</span></li>
+                        <li><i class="fas fa-phone-alt"></i><a href="tel:XXXXXXXXXXX">+XXX XXX XXX</a></li>
+                        <li><i class="fas fa-envelope"></i><a href="mailto:example@xxx.com">example@xxx.com</a></li>
+                        <li><i class="fas fa-clock"></i><span>Mon – Sat: 9AM – 7PM<br>Sun: 10AM – 4PM</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container"><p>© <span data-year>2026</span> Royal Cutz Barber — Seedwell Investment Limited. All rights reserved.</p></div>
+        </div>
+    </footer>
+
+    <a href="#" class="whatsapp-float" onclick="openWhatsApp(); return false;" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    <button class="to-top" id="toTop" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

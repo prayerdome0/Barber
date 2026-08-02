@@ -3,156 +3,333 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Royal Cutz | Seedwell Investment Limited</title>
+    <title>Royal Cutz — Premium Barbershop | Seedwell Investment Limited</title>
+    <meta name="description" content="Royal Cutz is a premium barbershop offering classic haircuts, beard sculpting, hot towel shaves and the royal grooming experience. Book your appointment today.">
+    <meta name="theme-color" content="#0A0A0A">
+    <meta property="og:title" content="Royal Cutz — Premium Barbershop">
+    <meta property="og:description" content="Sharp cuts. Premium style. Book your appointment at Royal Cutz today.">
+    <meta property="og:image" content="assets/images/hero.jpg">
+    <meta property="og:type" content="website">
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Poppins', sans-serif; background: #0A0A0A; color: white; scroll-behavior: smooth; }
-        h1, h2, h3 { font-family: 'Playfair Display', serif; }
-        
-        nav { position: fixed; top: 0; width: 100%; background: rgba(0,0,0,0.95); backdrop-filter: blur(10px); z-index: 1000; padding: 15px 0; border-bottom: 1px solid rgba(212, 175, 55, 0.3); }
-        .nav-container { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; }
-        
-        .logo { display: flex; align-items: center; gap: 12px; }
-        .logo i { font-size: 32px; color: #D4AF37; }
-        .logo h2 { font-size: 28px; letter-spacing: 2px; }
-        .logo span { color: #D4AF37; }
-        .logo p { font-size: 9px; color: #888; }
-        
-        /* Animated hamburger menu icon */
-        .mobile-menu { display: none; cursor: pointer; z-index: 1002; }
-        .mobile-menu .bar { width: 25px; height: 3px; background: #D4AF37; margin: 5px 0; transition: 0.3s; }
-        .mobile-menu.active .bar:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
-        .mobile-menu.active .bar:nth-child(2) { opacity: 0; }
-        .mobile-menu.active .bar:nth-child(3) { transform: rotate(-45deg) translate(7px, -6px); }
-        
-        .nav-links { display: flex; list-style: none; gap: 35px; }
-        .nav-links a { color: white; text-decoration: none; font-weight: 500; transition: 0.3s; }
-        .nav-links a:hover { color: #D4AF37; }
-        
-        .header-icons { display: flex; gap: 20px; align-items: center; }
-        .header-icons i { font-size: 20px; cursor: pointer; transition: 0.3s; color: white; }
-        .header-icons i:hover { color: #D4AF37; }
-        
-        /* Scale-in mobile menu */
-        @media (max-width: 768px) {
-            .nav-links { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100vh; background: #0A0A0A; flex-direction: column; justify-content: center; align-items: center; gap: 30px; z-index: 1001; transform: scale(0); transition: transform 0.3s ease; }
-            .nav-links.active { display: flex; transform: scale(1); }
-            .header-icons { display: none; }
-            .mobile-menu { display: block; }
-            .close-btn { position: absolute; top: 30px; right: 30px; font-size: 32px; cursor: pointer; color: white; }
-            .hero-content h1 { font-size: 42px; }
-        }
-        
-        .hero { height: 100vh; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url('https://i.ibb.co/VcYm96zN/0c75918a8c8facfb07dbf4a90ab8d073.jpg'); background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; text-align: center; margin-top: 65px; }
-        .hero-content h1 { font-size: 68px; }
-        .hero-content h1 span { color: #D4AF37; }
-        .btn-primary { background: #D4AF37; color: #0A0A0A; padding: 14px 40px; text-decoration: none; font-weight: 700; transition: 0.3s; display: inline-block; }
-        
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        section { padding: 100px 0; }
-        .section-header { text-align: center; margin-bottom: 60px; }
-        .section-header h2 { font-size: 48px; }
-        .section-header h2 span { color: #D4AF37; }
-        
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .service-card { background: #111; border-radius: 15px; overflow: hidden; transition: 0.4s; }
-        .service-card:hover { transform: translateY(-10px); }
-        .service-card img { width: 100%; height: 250px; object-fit: cover; }
-        .service-info { padding: 20px; text-align: center; }
-        .service-price { color: #D4AF37; font-size: 22px; font-weight: 700; margin: 10px 0; }
-        
-        .booking-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; background: #111; padding: 50px; border-radius: 20px; }
-        .form-group input, .form-group select { width: 100%; padding: 15px; background: #1A1A1A; border: none; border-radius: 10px; color: white; margin-bottom: 15px; }
-        .btn-submit { background: #D4AF37; color: #0A0A0A; padding: 14px 35px; border: none; cursor: pointer; font-weight: 700; }
-        
-        footer { background: #050505; text-align: center; padding: 40px; }
-        .copyright { font-size: 12px; color: #666; margin-top: 20px; }
-        .social-icons a { color: white; margin: 0 15px; font-size: 22px; transition: 0.3s; }
-        .social-icons a:hover { color: #D4AF37; }
-        
-        .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background: #25D366; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 99; }
-        .whatsapp-float i { color: white; font-size: 32px; }
-        
-        @media (max-width: 768px) {
-            .booking-grid { grid-template-columns: 1fr; }
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <nav>
-        <div class="nav-container">
-            <div class="logo">
-                <i class="fas fa-cut"></i>
-                <div><h2>ROYAL <span>CUTZ</span></h2><p>Seedwell Investment Limited</p></div>
+
+    <!-- Top contact strip -->
+    <div class="topbar">
+        <div class="topbar-inner">
+            <span><i class="fas fa-clock"></i>Mon – Sat: 9:00 AM – 7:00 PM &nbsp;|&nbsp; Sun: 10:00 AM – 4:00 PM</span>
+            <span class="tb-right">
+                <a href="tel:XXXXXXXXXXX"><i class="fas fa-phone"></i>+XXX XXX XXX</a>
+                <a href="mailto:example@xxx.com" style="margin-left:22px"><i class="fas fa-envelope"></i>example@xxx.com</a>
+            </span>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="nav-inner">
+            <a href="index.html" class="brand">
+                <span class="brand-icon"><i class="fas fa-cut"></i></span>
+                <span>
+                    <h1>ROYAL <span>CUTZ</span></h1>
+                    <p>Seedwell Investment Limited</p>
+                </span>
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-cta">
+                <a href="tel:XXXXXXXXXXX" class="nav-phone"><i class="fas fa-phone-alt"></i><span>Call Us<small>+XXX XXX XXX</small></span></a>
+                <a href="booking.html" class="btn btn-gold btn-sm">Book Now</a>
             </div>
-            <div class="mobile-menu" onclick="toggleMenu()">
-                <div class="bar"></div><div class="bar"></div><div class="bar"></div>
-            </div>
-            <ul class="nav-links" id="navLinks">
-                <div class="close-btn" onclick="toggleMenu()"><i class="fas fa-times"></i></div>
-                <li><a href="#home" onclick="closeMenu()">Home</a></li>
-                <li><a href="#services" onclick="closeMenu()">Services</a></li>
-                <li><a href="#booking" onclick="closeMenu()">Book Now</a></li>
-                <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
-            </ul>
-            <div class="header-icons">
-                <i class="fas fa-calendar-alt"></i>
-                <i class="fas fa-user-circle"></i>
+            <button class="hamburger" id="hamburger" aria-label="Open menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html" class="active">Home</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="about.html">About</a>
+        <a href="booking.html">Book Now</a>
+        <a href="contact.html">Contact</a>
+        <a href="booking.html" class="btn btn-gold mm-cta">Book Appointment</a>
+        <div class="mm-social">
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+    </div>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <span class="hero-badge"><i class="fas fa-star"></i> Luxury Grooming Experience</span>
+            <h1>SHARP CUTS.<br><span>PREMIUM STYLE.</span></h1>
+            <p>Step into Royal Cutz and experience grooming the way it should be — precision cuts, hot towel shaves and a vibe that's second to none.</p>
+            <div class="hero-actions">
+                <a href="booking.html" class="btn btn-gold">Book Appointment <i class="fas fa-arrow-right"></i></a>
+                <a href="services.html" class="btn btn-outline">Explore Services</a>
             </div>
         </div>
-    </nav>
-
-    <section id="home" class="hero">
-        <div class="hero-content"><h1>SHARP CUTS. <span>PREMIUM STYLE.</span></h1><p>Experience luxury grooming</p><a href="#booking" class="btn-primary">BOOK NOW →</a></div>
+        <a href="#stats" class="hero-scroll">Scroll <i class="fas fa-chevron-down"></i></a>
     </section>
 
-    <section id="services">
+    <!-- Marquee -->
+    <div class="marquee">
+        <div class="marquee-track">
+            <span>Walk-Ins Welcome <i class="fas fa-star"></i> Expert Barbers <i class="fas fa-star"></i> Premium Products <i class="fas fa-star"></i> Hot Towel Shaves <i class="fas fa-star"></i> Clean Environment <i class="fas fa-star"></i> Walk-Ins Welcome <i class="fas fa-star"></i> Expert Barbers <i class="fas fa-star"></i> Premium Products <i class="fas fa-star"></i> Hot Towel Shaves <i class="fas fa-star"></i> Clean Environment <i class="fas fa-star"></i></span>
+        </div>
+    </div>
+
+    <!-- Stats -->
+    <section class="stats-bar" id="stats">
         <div class="container">
-            <div class="section-header"><h2>Our <span>Services</span></h2></div>
+            <div class="stats-grid">
+                <div class="stat reveal"><h3>10<sup>+</sup></h3><p>Years of Craft</p></div>
+                <div class="stat reveal reveal-delay-1"><h3>5,000<sup>+</sup></h3><p>Happy Clients</p></div>
+                <div class="stat reveal reveal-delay-2"><h3>6</h3><p>Expert Barbers</p></div>
+                <div class="stat reveal reveal-delay-3"><h3>4.9<sup>★</sup></h3><p>Client Rating</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About preview -->
+    <section class="section">
+        <div class="container">
+            <div class="split">
+                <div class="split-media reveal">
+                    <img src="assets/images/barber-working.jpg" alt="Barber at work in Royal Cutz barbershop">
+                    <div class="exp-badge"><strong>10+</strong><span>Years of Excellence</span></div>
+                </div>
+                <div class="split-copy reveal reveal-delay-1">
+                    <span class="eyebrow">Welcome to Royal Cutz</span>
+                    <h2>The Art of <span>Gentlemen's Grooming</span></h2>
+                    <p>Founded under Seedwell Investment Limited, Royal Cutz was built on one simple belief — every gentleman deserves a haircut that makes him feel like royalty. From classic cuts to modern fades, our master barbers blend tradition with trend.</p>
+                    <ul class="split-list">
+                        <li><i class="fas fa-check-circle"></i><span><strong>Master barbers</strong> — trained in both classic and modern techniques</span></li>
+                        <li><i class="fas fa-check-circle"></i><span><strong>Premium products</strong> — only the best oils, waxes and tonics touch your hair</span></li>
+                        <li><i class="fas fa-check-circle"></i><span><strong>Relaxing atmosphere</strong> — leather chairs, great music and cold drinks</span></li>
+                    </ul>
+                    <a href="about.html" class="btn btn-gold">Our Story <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services preview -->
+    <section class="section section-alt">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">What We Do</span>
+                <h2>Our Signature <span>Services</span></h2>
+                <p>From quick touch-ups to the full royal treatment — every service is delivered with precision and care.</p>
+            </div>
             <div class="services-grid">
-                <div class="service-card"><img src="https://i.ibb.co/MHLkcRd/10beeb5d03edccb6bc92f4dc86276311.jpg"><div class="service-info"><h3>Classic Haircut</h3><div class="service-price">$35</div><button class="btn-submit" onclick="bookNow()">Book</button></div></div>
-                <div class="service-card"><img src="https://i.ibb.co/p6kbr1dc/aed3cac0a89e1224f5ed95ca63a3129e.jpg"><div class="service-info"><h3>Beard Sculpting</h3><div class="service-price">$25</div><button class="btn-submit" onclick="bookNow()">Book</button></div></div>
-                <div class="service-card"><img src="https://i.ibb.co/S7xcGWfs/0cc742a80619c26ca10ebfcf103eb071.jpg"><div class="service-info"><h3>The Royal Package</h3><div class="service-price">$55</div><button class="btn-submit" onclick="bookNow()">Book</button></div></div>
+                <div class="service-card reveal">
+                    <div class="service-media">
+                        <span class="service-tag">Most Popular</span>
+                        <img src="assets/images/classic-haircut.jpg" alt="Classic haircut">
+                    </div>
+                    <div class="service-info">
+                        <h3>Classic Haircut</h3>
+                        <p>The timeless cut, executed with razor-sharp precision and finished with a warm style consultation.</p>
+                        <div class="service-meta">
+                            <span class="service-price">$35</span>
+                            <span class="service-duration"><i class="far fa-clock"></i>45 min</span>
+                        </div>
+                        <button class="btn btn-gold" onclick="bookService('Classic Haircut')">Book This Service</button>
+                    </div>
+                </div>
+                <div class="service-card reveal reveal-delay-1">
+                    <div class="service-media">
+                        <span class="service-tag">Signature</span>
+                        <img src="assets/images/beard-trim.jpg" alt="Beard sculpting">
+                    </div>
+                    <div class="service-info">
+                        <h3>Beard Sculpting</h3>
+                        <p>Precision beard shaping, lining and conditioning to keep your beard sharp and well-groomed.</p>
+                        <div class="service-meta">
+                            <span class="service-price">$25</span>
+                            <span class="service-duration"><i class="far fa-clock"></i>30 min</span>
+                        </div>
+                        <button class="btn btn-gold" onclick="bookService('Beard Sculpting')">Book This Service</button>
+                    </div>
+                </div>
+                <div class="service-card reveal reveal-delay-2">
+                    <div class="service-media">
+                        <span class="service-tag">Ultimate</span>
+                        <img src="assets/images/hot-towel-shave.jpg" alt="The Royal Package">
+                    </div>
+                    <div class="service-info">
+                        <h3>The Royal Package</h3>
+                        <p>Our flagship experience: haircut, beard sculpting, hot towel shave, facial and scalp massage.</p>
+                        <div class="service-meta">
+                            <span class="service-price">$55</span>
+                            <span class="service-duration"><i class="far fa-clock"></i>90 min</span>
+                        </div>
+                        <button class="btn btn-gold" onclick="bookService('The Royal Package')">Book This Service</button>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align:center;margin-top:50px" class="reveal">
+                <a href="services.html" class="btn btn-outline">View All Services <i class="fas fa-arrow-right"></i></a>
             </div>
         </div>
     </section>
 
-    <section id="booking" style="background:#0F0F0F">
+    <!-- Why choose us -->
+    <section class="section">
         <div class="container">
-            <div class="booking-grid">
-                <div><h3>Book Appointment</h3><p>Walk-ins welcome or book online</p><ul style="margin-top:20px"><li>✓ Premium Products</li><li>✓ Clean Environment</li><li>✓ Expert Barbers</li></ul></div>
-                <div><form id="barberForm"><div class="form-group"><input type="text" placeholder="Your Name"></div><div class="form-group"><input type="email" placeholder="Email"></div><div class="form-group"><select><option>Classic Haircut - $35</option><option>Beard Sculpting - $25</option><option>The Royal Package - $55</option></select></div><div class="form-group"><input type="date"></div><button class="btn-submit">CONFIRM BOOKING</button></form></div>
+            <div class="section-head reveal">
+                <span class="eyebrow">The Royal Difference</span>
+                <h2>Why Choose <span>Royal Cutz?</span></h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card reveal"><div class="feature-icon"><i class="fas fa-user-tie"></i></div><h3>Master Barbers</h3><p>Our team lives and breathes the craft — constantly training on the latest trends and classic techniques.</p></div>
+                <div class="feature-card reveal reveal-delay-1"><div class="feature-icon"><i class="fas fa-spray-can-sparkles"></i></div><h3>Premium Products</h3><p>We only use top-tier grooming products — gentle on your hair and skin, strong on results.</p></div>
+                <div class="feature-card reveal reveal-delay-2"><div class="feature-icon"><i class="fas fa-soap"></i></div><h3>Hygiene First</h3><p>Sanitized tools, fresh towels and a spotless chair for every single client. Every time.</p></div>
+                <div class="feature-card reveal"><div class="feature-icon"><i class="fas fa-clock"></i></div><h3>Respect Your Time</h3><p>On-schedule appointments with minimal waiting — book online and walk straight to your chair.</p></div>
+                <div class="feature-card reveal reveal-delay-1"><div class="feature-icon"><i class="fas fa-hand-holding-heart"></i></div><h3>Personalized Service</h3><p>Every cut starts with a consultation. We listen, advise and deliver a style that fits you.</p></div>
+                <div class="feature-card reveal reveal-delay-2"><div class="feature-icon"><i class="fas fa-mug-hot"></i></div><h3>Relax & Unwind</h3><p>Leather chairs, great music, cold drinks and free Wi-Fi — grooming should feel like a treat.</p></div>
             </div>
         </div>
     </section>
 
-    <section id="contact">
+    <!-- Gallery strip -->
+    <section class="section section-alt">
         <div class="container">
-            <div class="booking-grid">
-                <div><h3>Visit Us</h3><p>123 Barber Street, XXX City<br>Phone: XXX XXX XXX<br>Email: example@xxx.com</p></div>
-                <div><h3>Send Message</h3><form id="contactForm"><div class="form-group"><input type="text" placeholder="Name"></div><div class="form-group"><input type="email" placeholder="Email"></div><textarea placeholder="Message" style="width:100%;padding:15px;background:#1A1A1A;border:none;color:white"></textarea><button class="btn-submit" style="margin-top:15px">SEND</button></form></div>
+            <div class="section-head reveal">
+                <span class="eyebrow">Inside The Shop</span>
+                <h2>Step Into <span>Royal Cutz</span></h2>
+                <p>A glimpse of our space, our craft and the results our clients walk out with.</p>
+            </div>
+            <div class="gallery-grid">
+                <a href="gallery.html" class="gallery-item reveal"><img src="assets/images/hero.jpg" alt="Royal Cutz interior"><span class="gallery-caption"><h4>The Chair Room</h4><span>Our Space</span></span></a>
+                <a href="gallery.html" class="gallery-item reveal reveal-delay-1"><img src="assets/images/hair-design.jpg" alt="Skin fade with design"><span class="gallery-caption"><h4>Fade & Design</h4><span>Our Work</span></span></a>
+                <a href="gallery.html" class="gallery-item reveal reveal-delay-2"><img src="assets/images/hot-towel-shave.jpg" alt="Hot towel shave"><span class="gallery-caption"><h4>Hot Towel Shave</h4><span>Signature</span></span></a>
+                <a href="gallery.html" class="gallery-item reveal"><img src="assets/images/straight-razor.jpg" alt="Straight razor detail"><span class="gallery-caption"><h4>Precision Tools</h4><span>Our Craft</span></span></a>
+                <a href="gallery.html" class="gallery-item reveal reveal-delay-1"><img src="assets/images/kids-cut.jpg" alt="Kids haircut"><span class="gallery-caption"><h4>Little Gentlemen</h4><span>Kids Cuts</span></span></a>
+                <a href="gallery.html" class="gallery-item reveal reveal-delay-2"><img src="assets/images/products.jpg" alt="Premium grooming products"><span class="gallery-caption"><h4>Premium Products</h4><span>We Use</span></span></a>
+            </div>
+            <div style="text-align:center;margin-top:50px" class="reveal">
+                <a href="gallery.html" class="btn btn-outline">View Full Gallery <i class="fas fa-arrow-right"></i></a>
             </div>
         </div>
     </section>
 
-    <footer><div class="social-icons"><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-tiktok"></i></a></div><p>© 2026 Royal Cutz Barber</p><div class="copyright">Seedwell Investment Limited | Phone: XXX XXX XXX | Email: example@xxx.com | Address: XXX Street, XXX City</div></footer>
-    <a href="https://wa.me/XXXXXXXXXXX" class="whatsapp-float"><i class="fab fa-whatsapp"></i></a>
+    <!-- Testimonials -->
+    <section class="section">
+        <div class="container">
+            <div class="section-head reveal">
+                <span class="eyebrow">Client Love</span>
+                <h2>What Our <span>Clients Say</span></h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card reveal">
+                    <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <blockquote>"The Royal Package is worth every cent. Best hot towel shave I've ever had — I walked out feeling like a new man."</blockquote>
+                    <div class="testimonial-author"><span class="t-avatar">JM</span><span><span class="t-name">James M.</span><br><span class="t-role">Royal Package Client</span></span></div>
+                </div>
+                <div class="testimonial-card reveal reveal-delay-1">
+                    <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <blockquote>"I've been getting my fade done here for two years. Consistent, clean and they actually listen to what you want. Highly recommend."</blockquote>
+                    <div class="testimonial-author"><span class="t-avatar">DK</span><span><span class="t-name">Daniel K.</span><br><span class="t-role">Regular Client</span></span></div>
+                </div>
+                <div class="testimonial-card reveal reveal-delay-2">
+                    <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <blockquote>"Took my son for his first proper haircut. They were so patient with him and the cut was perfect. Great atmosphere too."</blockquote>
+                    <div class="testimonial-author"><span class="t-avatar">MT</span><span><span class="t-name">Michael T.</span><br><span class="t-role">Kids Cut Client</span></span></div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <script>
-        function toggleMenu() { 
-            document.getElementById('navLinks').classList.toggle('active');
-            document.querySelector('.mobile-menu').classList.toggle('active');
-        }
-        function closeMenu() { 
-            document.getElementById('navLinks').classList.remove('active');
-            document.querySelector('.mobile-menu').classList.remove('active');
-        }
-        function bookNow() { document.getElementById('booking').scrollIntoView({ behavior: 'smooth' }); }
-        document.querySelectorAll('a[href^="#"]').forEach(a => { a.addEventListener('click', function(e) { e.preventDefault(); document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' }); closeMenu(); }); });
-        document.getElementById('barberForm')?.addEventListener('submit', function(e) { e.preventDefault(); alert('Appointment booked!'); this.reset(); });
-        document.getElementById('contactForm')?.addEventListener('submit', function(e) { e.preventDefault(); alert('Message sent!'); this.reset(); });
-    </script>
+    <!-- CTA banner -->
+    <section class="cta-banner">
+        <div class="container reveal">
+            <h2>Ready For A <span>Fresh Look?</span></h2>
+            <p>Your chair is waiting. Book online in under a minute, or walk in — we'll take care of the rest.</p>
+            <div class="cta-actions">
+                <a href="booking.html" class="btn btn-gold">Book Appointment <i class="fas fa-arrow-right"></i></a>
+                <a href="#" class="btn btn-whatsapp" onclick="openWhatsApp(); return false;"><i class="fab fa-whatsapp"></i> WhatsApp Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="brand">
+                        <span class="brand-icon"><i class="fas fa-cut"></i></span>
+                        <span><h1>ROYAL <span>CUTZ</span></h1><p>Seedwell Investment Limited</p></span>
+                    </a>
+                    <p>Premium grooming for the modern gentleman. Sharp cuts, expert barbers and an experience that keeps clients coming back.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="booking.html">Book Appointment</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html">Classic Haircut</a></li>
+                        <li><a href="services.html">Beard Sculpting</a></li>
+                        <li><a href="services.html">Skin Fade & Design</a></li>
+                        <li><a href="services.html">Hot Towel Shave</a></li>
+                        <li><a href="services.html">Kids Cut</a></li>
+                        <li><a href="services.html">The Royal Package</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Get In Touch</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i><span>123 Barber Street,<br>XXX City</span></li>
+                        <li><i class="fas fa-phone-alt"></i><a href="tel:XXXXXXXXXXX">+XXX XXX XXX</a></li>
+                        <li><i class="fas fa-envelope"></i><a href="mailto:example@xxx.com">example@xxx.com</a></li>
+                        <li><i class="fas fa-clock"></i><span>Mon – Sat: 9AM – 7PM<br>Sun: 10AM – 4PM</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>© <span data-year>2026</span> Royal Cutz Barber — Seedwell Investment Limited. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="whatsapp-float" onclick="openWhatsApp(); return false;" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    <button class="to-top" id="toTop" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
